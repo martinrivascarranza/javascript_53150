@@ -34,12 +34,14 @@ comentario en linea vacia
 
 // alert(resultado + name);
 
-let primerNumero = prompt('ingrese un número')
-primerNumero = parseInt(primerNumero)
-let segundoNumero = prompt('ingrese otro número')
-segundoNumero = parseInt(segundoNumero)
-alert(primerNumero + segundoNumero)
+// let primerNumero = prompt('ingrese un número')
+// primerNumero = parseInt(primerNumero)
+// let segundoNumero = prompt('ingrese otro número')
+// segundoNumero = parseInt(segundoNumero)
+// alert(primerNumero + segundoNumero)
 
 
+let primerNombre = prompt('Ingrese su nombre ')
+let primerApellido = prompt('Ingrese su apellido ')
 
-
+alert(primerNombre + "" + primerApellido)
