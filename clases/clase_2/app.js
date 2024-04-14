@@ -51,12 +51,35 @@
 
 //BREAK
 
-for(let i = 1; i <= 10; i++) {
-  if(i == 6) {
-    console.log(i)
-    console.log('el siclo fue interrumpido en el n 6')
-    break;
+// for(let i = 1; i <= 10; i++) {
+//   if(i == 6) {
+//     console.log(i)
+//     console.log('el siclo fue interrumpido en el n 6')
+//     break;
     
-  }
-  alert(i)
-}
+//   }
+//   alert(i)
+// }
+
+
+//WHILE
+
+// let i = 1
+
+// while( i < 10) {
+//   console.log('iterator number ' + i);
+//   i++;
+// }
+
+// DO WHILE 
+
+
+
+let number = 0;
+
+do{
+
+  number = prompt('please enter a number ');
+  console.log(number);
+
+}while(parseInt(number));
