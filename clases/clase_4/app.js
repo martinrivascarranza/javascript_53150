@@ -101,14 +101,143 @@
 
 //funcion for of
 
-const productos = [
+// const productos = [
 
-{id: 1, nombre: 'kb 10kg'},
-{id : 2, nombre: 'kb 14kg'},
-{id: 3, nombre: 'kb 18'},
+// {id: 1, nombre: 'kb 10kg'},
+// {id : 2, nombre: 'kb 14kg'},
+// {id: 3, nombre: 'kb 18'},
 
-]
+// ]
 
-for (const product of productos) {
-  console.log(product.id);
+// for (const product of productos) {
+//   console.log(product.id);
+// }
+
+
+/////////////////////////////////////////
+/////////CLASE ONLINE///////////////////
+///////////////////////////////////////
+
+const nombres = ['martin', 'nadia', 'carolina', 'beandra', 'vanessa', 'roxy'];
+
+// for(let i = 0; i < nombres.length; i++) {
+//   console.log(nombres[i]);
+// }
+
+
+//metodos ejemplos
+
+// nombres.push('maria'); //agrega un elemento al final del array
+// nombres.unshift('pedro')// agrega un nombre al comienzo del array
+// nombres.pop(); // elimina el ultimo elemento del array
+// nombres.shift(); // elimina el primer elemento del array
+// nombres.join('') // genera un string con los valores del array, separados por el valor que este dentro de ,join
+// nombres.indexOf('hector') // nos ayuda a encontrar el valor de la ubicación de un elemento dentro del array
+// nombres.includes('hector') // devuelve un boolean true or false dependiendo de si el elemento esta o no
+// nombres.sort() // ordena alfabeticamente los valores
+// nombres.reverse() // invierte los valores del array
+//nombres.splice(1,1); // nos ayudar a eliminar objetos del array o items en una posición particular
+//console.log(nombres);
+
+
+
+
+//objetos simples
+
+
+const personaUno = {
+  nombre: 'martin',
+  edad : 32,
+  nacionalidad: 'venezolano/portugues',
+  estado: 'soltero',
+  profesion: 'programador front end',
+  salario: '3500 euros mensual'
+  }
+
+  console.log(personaUno.salario);
+
+
+
+
+//objetos arrays
+
+const personas = [{
+nombre: 'martin',
+edad : 32,
+nacionalidad: 'venezolano/portugues',
+estado: 'soltero',
+profesion: 'programador front end',
+salario: '3500 euros mensual'
+},
+
+{
+  nombre: 'fernanda',
+  edad : 29,
+  nacionalidad: 'portugues',
+  estado: 'soltera',
+  profesion: 'programador backend',
+  salario: '4500 euros mensual'
+
+},
+
+{
+
+  nombre: 'nadia',
+  edad : 37,
+  nacionalidad: 'venezolana',
+  estado: 'soltero',
+  profesion: 'bachiller',
+  salario: '120 dolares mensual'
+
+}]
+
+// se recorre de esta manera, mediando este ciclo for es que accedemos alos valores del objetos array
+for(const persona of personas) {
+  console.log('nombre de las peronas ' + persona.nombre + ' edad de las personas ' +
+persona.edad);
 }
+
+
+
+// funcion particular 
+
+// function sumar(valorUno, valorDos) {
+
+// let result = valorUno + valorDos;
+// return result; // siempre poner return para obtener resultado en las funciones
+
+// }
+
+// otra forma de hacerlo 
+
+// const sumar = function(valorUno, valorDos) {
+//   let result = valorUno + valorDos;
+//   return result;
+// }
+
+//otra forma function flecha
+
+// const sumar = (valorUno, valorDos) => {
+  
+//   let result = valorUno + valorDos;
+//   return result;
+// }
+
+
+// forma normal 
+
+// function sumar(valorUno, valorDos) {
+//   let result = valorUno + valorDos;
+//  return result;
+// }
+
+//otra forma 
+
+// const sumar = function(valorUno, valorDos){
+//   let result = valorUno + valorDos;
+//   return result;
+
+// }
+
+// console.log(sumar(10,10));
+
