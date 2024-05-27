@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTAL KETTLEBELL</title>
+</head>
+<body>
+    <h1>Welcome to TOTAL KETTLEBELL</h1>
+    <div>
+        <label for="customerName">Please enter your name:</label>
+        <input type="text" id="customerName" name="customerName">
+        <button id="submitName">Submit</button>
+    </div>
+
+    <div id="kettlebellSection" style="display:none;">
+        <h2>Available Kettlebells</h2>
+        <div id="availableKettlebells"></div>
+        <label for="chosenKettlebell">Please enter your chosen kettlebell:</label>
+        <input type="text" id="chosenKettlebell" name="chosenKettlebell">
+        <button id="submitKettlebell">Submit</button>
+    </div>
+
+    <div id="paymentSection" style="display:none;">
+        <h2>Payment Options</h2>
+        <label for="paymentMethod">Please choose your payment option:</label>
+        <select id="paymentMethod" name="paymentMethod">
+            <option value="credit card">Credit Card</option>
+            <option value="debit card">Debit Card</option>
+            <option value="transfer">Transfer</option>
+            <option value="bitcoin">Bitcoin</option>
+        </select>
+        <button id="submitPayment">Submit</button>
+    </div>
+
+    <div id="confirmationSection" style="display:none;">
+        <h2>Confirmation</h2>
+        <p id="confirmationMessage"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
