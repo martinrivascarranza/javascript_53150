@@ -148,9 +148,12 @@ console.log(productoUno.precio);*/
 class Producto {
 
 //funcion llamada constructor
- constructor(titulo) {
+ constructor(titulo, precio) {
 
+ 
   this.titulo = titulo;
+  this.precio = precio;
+ 
 
  }
 
@@ -158,8 +161,10 @@ class Producto {
 }
 
 
-let producto1 = new Producto('coca cola');
-let producto2 = new Producto('burguer');
+let producto1 = new Producto('coca cola ', 25 + ' pesos');
+let producto2 = new Producto('burguer ', 35 + ' pesos');
+let producto3 = new Producto('Helado ', + 25 + ' pesos')
 
 console.log(producto1);
 console.log(producto2);
+console.log(producto3);
