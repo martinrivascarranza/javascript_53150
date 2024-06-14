@@ -115,6 +115,8 @@
 
 
 
+
+
 //////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
  /* CLASE 5 PROFESOR MAXIMILIANO*/
@@ -123,6 +125,7 @@
 
 
 //objeto literal
+//paradigma de programación funcional
 
 /*
 const productoUno = {
@@ -142,29 +145,67 @@ productoUno.precio = 200;
 console.log(productoUno.precio);*/
 
 
-/* objeto literal con clases class */
+/* objeto literal con clases class (Paradigma de programacion orientado a objetos) */
 
 // la clase siempre comienza en mayuscula
-class Producto {
+// class Producto {
 
 //funcion llamada constructor
- constructor(titulo, precio) {
+//  constructor(titulo, precio) {
 
  
-  this.titulo = titulo;
-  this.precio = precio;
+//   this.titulo = titulo;
+//   this.precio = precio;
  
 
- }
+//  }
 
 
-}
+// }
 
 
-let producto1 = new Producto('coca cola ', 25 + ' pesos');
-let producto2 = new Producto('burguer ', 35 + ' pesos');
-let producto3 = new Producto('Helado ', + 25 + ' pesos')
+// let producto1 = new Producto('coca cola ', 25 + ' pesos');
+// let producto2 = new Producto('burguer ', 35 + ' pesos');
+// let producto3 = new Producto('Helado ', + 25 + ' pesos')
 
-console.log(producto1);
-console.log(producto2);
-console.log(producto3);
+// console.log(producto1);
+// console.log(producto2);
+// console.log(producto3);
+
+
+// class Caps {
+
+//   constructor(team, city, price) {
+ 
+//    this.team = team
+//    this.city = city
+//    this.price = price
+ 
+//    }
+
+//    //vamos a agregar metodos (Los metodos son funciones)
+   
+//    calcularIva() {
+//     const precioIva = this.price * 1.19 + " $"
+//     return precioIva
+//    }
+
+//   aplicarDescuento(cantidad) {
+//     if(this.price > 40 && cantidad >= 5) {
+//       return true
+//     } else {
+//       return false
+//     }
+//   }
+
+//  }
+ 
+//  const team1 = new Caps ('Braves', 'Atlanta', 35);
+//  const team2 = new Caps ('Padres', 'San Deigo', 25);
+//  const team3 = new Caps ('Angels', 'Anaheim', 20);
+//  const team4 = new Caps ('Dodgers', 'Los Angeles', 50);
+ 
+// console.log(team1.team);
+// console.log(team1.city);
+// console.log(team1.calcularIva());
+// console.log(team4.aplicarDescuento(5));
