@@ -41,6 +41,7 @@ localStorage.removeItem('titulo');*/
 
 
 //EJEMPLO DEL PROFESOR PARA GUARDAR DOS PRODUCTOS EN EL LOCAL STORAGE ANTES DE USAR JSON//
+//se usa localStorage.setItem y localStorage.getItem
 
 const productosRecuperados = JSON.parse(localStorage.getItem('productos'))
 let productos = []

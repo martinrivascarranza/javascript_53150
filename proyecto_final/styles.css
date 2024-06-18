@@ -41,6 +41,12 @@ body{
 img{
   width: 100%;
 }
+.iva{
+  font-size: 0.7rem ;
+  margin-top: 5px;
+  margin-left: 2px;
+  color: black;
+}
 
 /*=====================================================*/
 /*HEADER*/
@@ -77,6 +83,7 @@ header{
 .product-box{
   color: var(--text-color);
 }
+
 
 
 /* CART   */
