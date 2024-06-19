@@ -49,6 +49,7 @@ function addEvents() {
   cartQuantity_inputs.forEach( input => {
     input.addEventListener('change', handle_changeItemQuantity)
   })
+  
   // Add item to the cart
   let addCart_btns = document.querySelectorAll('.add-cart')
   addCart_btns.forEach(btn => {
