@@ -3,6 +3,8 @@
 const cartIcon = document.querySelector('#cart-icon')
 const cart = document.querySelector('.cart')
 const closeCart = document.querySelector('#cart-close')
+const cartCount = document.querySelector('#cart-count')
+let count = 0
 
 cartIcon.addEventListener('click', () =>{
   cart.classList.add('active')
@@ -29,9 +31,9 @@ function start() {
 /* updtae and rerender */ 
 
 function update() {
-
   addEvents();
   updateTotal();
+  updateCartCount();
 }
 
 /* add events */ 
@@ -88,7 +90,8 @@ function handle_cartItem() {
    newNode.innerHTML = cartBoxElement
    const cartContent = cart.querySelector('.cart-content')
    cartContent.appendChild(newNode)
-
+   
+   count++
    update()
 }
 
@@ -109,7 +112,7 @@ function handle_buyOrder() {
     icon: "success"
   });
   itemsAdded = []
-
+  count = 0
   update()
 }
 
@@ -117,6 +120,7 @@ function handle_buyOrder() {
 function handle_removeCartItem() {
   this.parentElement.remove()
   itemsAdded = itemsAdded.filter((el) => el.title != this.parentElement.querySelector('.cart-product-title').innerHTML)
+  count--
   update()
 }
 
@@ -148,6 +152,10 @@ function updateTotal() {
 total = total.toFixed(2)
 
 totalElement.innerHTML = '$' + total
+}
+
+function updateCartCount() {
+  cartCount.textContent = count;
 }
 
 
