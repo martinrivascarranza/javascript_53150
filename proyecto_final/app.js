@@ -44,23 +44,24 @@ function addEvents() {
   cartRemove_btns.forEach((btn) => {
     btn.addEventListener('click', handle_removeCartItem)
   })
-
   // change item quantity
-
   let cartQuantity_inputs = document.querySelectorAll('.cart-quantity');
   cartQuantity_inputs.forEach( input => {
     input.addEventListener('change', handle_changeItemQuantity)
   })
-
   // Add item to the cart
-
-let addCart_btns = document.querySelectorAll('.add-cart')
-addCart_btns.forEach(btn => {
+  let addCart_btns = document.querySelectorAll('.add-cart')
+  addCart_btns.forEach(btn => {
   btn.addEventListener('click', handle_cartItem)
 })
+/* Buy order */
+const buy_btn = document.querySelector('.btn-buy')
+buy_btn.addEventListener('click', handle_buyOrder)
 }
 
 /* HANDLE EVENTS FUNCTIONS */ 
+let itemsAdded = []
+
 function handle_cartItem() {
    let product = this.parentElement
    let title = product.querySelector('.product-title').innerHTML
@@ -73,9 +74,14 @@ function handle_cartItem() {
     price,
     imgSrc
    }
-
+   // handle item already exist!
+   if(itemsAdded.find(el => el.title == newToAdd.title)) {
+    Swal.fire("This item already exist");
+    return 
+   } else {
+    itemsAdded.push(newToAdd)
+   }
    //add product to cart
-
    let cartBoxElement = CartBoxComponent(title, price, imgSrc)
    let newNode = document.createElement('div')
    newNode.innerHTML = cartBoxElement
@@ -85,12 +91,34 @@ function handle_cartItem() {
    update()
 }
 
-
-function handle_removeCartItem() {
-  this.parentElement.remove()
+function handle_buyOrder() {
+  if(itemsAdded.length <= 0) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: 'There is no Order to place Yet, \nPlease make an order first.',
+    });
+    return
+  } 
+  const cartContent = cart.querySelector('.cart-content')
+  cartContent.innerHTML = ''
+  Swal.fire({
+    title: "Great!",
+    text: "Your order is placed Successfully",
+    icon: "success"
+  });
+  itemsAdded = []
 
   update()
 }
+
+
+function handle_removeCartItem() {
+  this.parentElement.remove()
+  itemsAdded = itemsAdded.filter((el) => el.title != this.parentElement.querySelector('.cart-product-title').innerHTML)
+  update()
+}
+
 
 function handle_changeItemQuantity() {
 if(isNaN(this.value) || this.value < 1) {
